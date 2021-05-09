@@ -44,5 +44,6 @@ public class FileListFragment extends Fragment {
         recyclerView.setAdapter(fileAdapter);
 
         return view;
+
     }
 }
