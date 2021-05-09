@@ -1,30 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-<FrameLayout
-    android:id="@+id/freame_files_pathContainer"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingStart="12dp">
-    <ImageView
-        android:id="@+id/iv_filesBack"
-        android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/freame_files_pathContainer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_back_black_24dp"/>
-    <TextView
-        android:id="@+id/tv_files_path"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:textColor="@color/black"
-        tools:text="External storage"/>
-</FrameLayout>
+        android:paddingStart="24dp"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_files_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_back_black_24dp" />
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tv_files_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:textColor="@color/black"
+            tools:text="External storage" />
+    </FrameLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_files"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:clipToPadding="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/freame_files_pathContainer"/>
+        android:layout_below="@id/freame_files_pathContainer" />
 </RelativeLayout>
